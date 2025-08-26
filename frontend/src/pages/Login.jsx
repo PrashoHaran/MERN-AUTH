@@ -15,9 +15,7 @@ import { toast } from 'sonner'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { getData } from '@/context/userContext'
-
-
-
+import Google from "../assets/googleLogo.png"
 
 const Login = () => {
     const {setUser} = getData()
@@ -65,8 +63,8 @@ const Login = () => {
         <div className='relative w-full h-screen md:h-[760px] bg-green-100 overflow-hidden'>
             <div className='min-h-screen flex flex-col to-muted/20'>
                 <div className='flex-1 flex items-center justify-center p-4'>
-                    <div className='w-full max-w-md space-y-6'>
-                        <div className='text-ceter space-y-2'>
+                    <div className='w-full max-w-md space-y-6 flex flex-col items-center'>
+                        <div className='text-center space-y-2'>
                             <h1 className='text-3xl font-bold tracking-tight text-green-600'>Login into your account</h1>
                             <p className='text-gray-600'>Start organizing your thoughts and ideas today</p>
                         </div>
@@ -134,6 +132,10 @@ const Login = () => {
                                         ) : "Login"
                                     }
                                 </Button>
+                                <Button onClick={()=>window.open("http://localhost:8000/auth/google", "_self")} className='w-full' variant='outline'>
+                                    <img src={Google} alt="" className='w-5'/>
+                                    Login with Google
+                                    </Button>
                             </CardFooter>
                         </Card>
                     </div>

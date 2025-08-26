@@ -54,7 +54,7 @@ const Navbar = () => {
                             user ? <DropdownMenu>
                                 <DropdownMenuTrigger>
                                     <Avatar>
-                                        <AvatarImage src="https://github.com/shadcn.png" />
+                                        <AvatarImage src={user?.avatar} />
                                         <AvatarFallback>CN</AvatarFallback>
                                     </Avatar>
                                 </DropdownMenuTrigger>

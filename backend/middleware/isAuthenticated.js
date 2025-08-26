@@ -36,7 +36,8 @@ export const isAuthenticated = async(req, res, next) =>{
                     message:"user not found"
                 })
             }
-
+            
+            req.user = user
             req.userId = user._id  
             next()
         })
